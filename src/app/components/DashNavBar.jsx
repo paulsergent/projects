@@ -1,12 +1,14 @@
 import Link from "next/link";
 
-export default function Footer() {
-
-    const currentYear = new Date().getFullYear()
-
+export default function DashNavbar() {
   return (
-    <footer className="bg-blue-800 text-white h-[30vh] flex flex-col items-center justify-center text-3xl">
-        <p>This app is a product of &copy;<Link href="https://univelcity.com/" target="_blank" className="hover:font-bold px-3">univelcity</Link> {currentYear}</p>
-    </footer>
+    <nav>
+        <ul className="flex bg-orange-500 text-white h-14 items-center justify-end px-4 space-x-5 capitalize text-2xl">
+            <li><Link href="/dashboard">Dashboard</Link></li>
+            <li><Link href="/dashboard/users">users</Link></li>
+            <li><Link href="/dashboard/admin">admin</Link></li>
+            
+        </ul>
+    </nav>
   )
 }
